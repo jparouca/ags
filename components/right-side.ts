@@ -4,9 +4,12 @@ import { Clock } from "components/clock"
 import { Divider } from "components/divider"
 import { volumeIndicator } from "components/volume-indicator"
 import { SysTray } from './systray.js';
+const audio = await Service.import('audio')
 
 export const Right = () => {
   return Widget.EventBox({
+    onSecondaryClick: () => audio.microphone.is_muted = !audio.microphone.is_muted,
+    onPrimaryClick: () => audio.speaker.is_muted = !audio.speaker.is_muted,
     onScrollUp: () => {
       if (!Audio.speaker) return;
       if (Audio.speaker.volume <= 0.09) Audio.speaker.volume += 0.01;
@@ -31,5 +34,8 @@ export const Right = () => {
         Clock(),
       ],
     })
+  }).hook(audio.speaker, (self) => {
+    const vol = audio.speaker.volume * 100;
+    self.tooltip_text = `Volume ${Math.floor(vol)}%`;
   })
 }

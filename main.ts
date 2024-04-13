@@ -49,7 +49,7 @@ function Media() {
       const { track_artists, track_title } = mpris.players[0]
       return `${track_artists.join(", ")} - ${track_title}`
     } else {
-      return "Nothing is playing"
+      return ""
     }
   })
 
