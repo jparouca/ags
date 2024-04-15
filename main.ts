@@ -48,9 +48,8 @@ function Media() {
     if (mpris.players[0]) {
       const { track_artists, track_title } = mpris.players[0]
       return `${track_artists.join(", ")} - ${track_title}`
-    } else {
-      return ""
     }
+    return ""
   })
 
   return Widget.Button({
@@ -58,9 +57,15 @@ function Media() {
     on_primary_click: () => mpris.getPlayer("")?.playPause(),
     on_scroll_up: () => mpris.getPlayer("")?.next(),
     on_scroll_down: () => mpris.getPlayer("")?.previous(),
-    child: Widget.Label({ label }),
+    child: Widget.Revealer({
+      revealChild: true,
+      transitionDuration: 1000,
+      transition: 'slide_right',
+      child: Widget.Label({ label }),
+    })
   })
 }
+
 
 function Center() {
   return Widget.Box({

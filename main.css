@@ -35,14 +35,12 @@
 
 .workspace {
   background-color: #161617;
-  border-radius: 12px;
-  color: #C9C7CD;
+  color: #3E3E43;
   transition: 100ms cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .workspace-active {
-  background-color: #C9C7CD;
-  color: #161617;
+  color: #C9C7CD;
 }
 
 .systray {
