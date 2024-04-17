@@ -34,13 +34,16 @@
 }
 
 .workspace {
-  background-color: #161617;
-  color: #3E3E43;
+  background-color: #3E3E43;
+  padding: 0px;
+  border-radius: 5px;
+  min-width: 6px;
+  min-height: 6px;
   transition: 100ms cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .workspace-active {
-  color: #C9C7CD;
+  background-color: #C9C7CD;
 }
 
 .systray {
@@ -56,3 +59,19 @@
   background: #161617;
   color: #C9C7CD;
 }
+
+.microphone {
+  background-color: #161617;
+  color: #C9C6CD;
+}
+.microphone-muted {
+  background-color: #161617;
+  color: #757581;
+}
+
+
+.card {
+  border-radius: 8px;
+  padding: 4px;
+}
+

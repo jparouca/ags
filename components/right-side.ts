@@ -4,6 +4,7 @@ import { Clock } from "components/clock"
 import { Divider } from "components/divider"
 import { volumeIndicator } from "components/volume-indicator"
 import { SysTray } from './systray.js';
+import { MicIndicator } from './mic-indicator.js';
 const audio = await Service.import('audio')
 
 export const Right = () => {
@@ -28,6 +29,7 @@ export const Right = () => {
       spacing: 8,
       children: [
         volumeIndicator,
+        MicIndicator,
         Divider(),
         SysTray(),
         Divider(),
