@@ -13,7 +13,7 @@ export const volumeIndicator = Widget.Box({
         [0, 'muted'],
       ].find(([threshold]) => threshold <= vol)?.[1];
 
-      self.icon = audio.speaker.is_muted ? '../icons/speaker-simple-x-fill.svg' : `audio-volume-${icon}-symbolic`;
+      self.icon = audio.speaker.is_muted ? 'speaker-simple-x-fill' : `audio-volume-${icon}-symbolic`;
     }),
   })
 })
