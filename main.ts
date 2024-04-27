@@ -1,30 +1,12 @@
+import { DashWindow } from "components/dashboard"
 import { Left } from "components/left-side"
+import popupWindow from "components/popup-window"
 import { Right } from "components/right-side"
 
 const hyprland = await Service.import("hyprland")
 const notifications = await Service.import("notifications")
 const mpris = await Service.import("mpris")
-const audio = await Service.import("audio")
-const battery = await Service.import("battery")
 
-const date = Variable("", {
-  poll: [1000, 'date "+%H:%M:%S %b %e."'],
-})
-
-function Workspaces() {
-  const activeId = hyprland.active.workspace.bind("id")
-  const workspaces = hyprland.bind("workspaces")
-    .as(ws => ws.map(({ id }) => Widget.Button({
-      on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
-      child: Widget.Label(`${id}`),
-      class_name: activeId.as(i => `${i === id ? "focused" : ""}`),
-    })))
-
-  return Widget.Box({
-    class_name: "workspaces",
-    children: workspaces,
-  })
-}
 
 function Notification() {
   const popups = notifications.bind("popups")
@@ -98,6 +80,7 @@ App.config({
   style: "./main.css",
   windows: [
     Bar(),
+    DashWindow(),
   ],
 })
 

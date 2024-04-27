@@ -2,7 +2,7 @@ const { GLib } = imports.gi;
 
 export const Clock = () => Widget.Box({
   vpack: 'center',
-  className: 'spacing-h-4 bar-clock-box',
+  className: 'spacing-h-4 clock',
   children: [
     Widget.Label({
       className: 'bar-time',

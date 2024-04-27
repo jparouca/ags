@@ -5,6 +5,8 @@ import { Divider } from "components/divider"
 import { volumeIndicator } from "components/volume-indicator"
 import { SysTray } from './systray.js';
 import { MicIndicator } from './mic-indicator.js';
+import { BatteryWidget } from './battery.js';
+import { Dashboard } from './dashboard.js';
 const audio = await Service.import('audio')
 
 export const Right = () => {
@@ -30,10 +32,12 @@ export const Right = () => {
       children: [
         volumeIndicator,
         MicIndicator,
+        // BatteryWidget(),
         Divider(),
         SysTray(),
         Divider(),
         Clock(),
+        Dashboard(),
       ],
     })
   }).hook(audio.speaker, (self) => {

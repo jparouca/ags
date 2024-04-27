@@ -10,7 +10,6 @@
 
 
 .right {
-  margin-right: 2rem;
   color: #C9C7CD;
 }
 
@@ -74,4 +73,18 @@
   border-radius: 8px;
   padding: 4px;
 }
+
+.clock {
+  color: #C9C7CD;
+  
+  margin-right: 1rem;
+
+}
+
+.dashboard-btn {
+
+  background-color: #161617;
+  color: #757581;
+}
+
 
