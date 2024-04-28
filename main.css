@@ -63,6 +63,7 @@
   background-color: #161617;
   color: #C9C6CD;
 }
+
 .microphone-muted {
   background-color: #161617;
   color: #757581;
@@ -76,7 +77,7 @@
 
 .clock {
   color: #C9C7CD;
-  
+
   margin-right: 1rem;
 
 }
@@ -88,3 +89,12 @@
 }
 
 
+.dashboard {
+  padding: 2rem;
+  background-color: #161617;
+}
+
+
+.notification-list {
+  padding: 10px;
+}
