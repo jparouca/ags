@@ -1,9 +1,7 @@
 import { DashWindow } from "components/dashboard"
 import { Left } from "components/left-side"
-import popupWindow from "components/popup-window"
 import { Right } from "components/right-side"
 
-const hyprland = await Service.import("hyprland")
 const notifications = await Service.import("notifications")
 const mpris = await Service.import("mpris")
 

@@ -1,6 +1,20 @@
 import popupWindow from "./popup-window";
 const notifications = await Service.import("notifications")
 
+let tasks = Variable([]);
+
+const TOKEN_API = '4da56d6910a443ba5cf82acb32b20c374ccd1460';
+const URL = 'https://api.todoist.com/rest/v2/tasks';
+
+Utils.fetch(URL, {
+  headers: {
+    Authorization: `Bearer ${TOKEN_API}`,
+  },
+}).then((response) => response.json()).then((data) => {
+  tasks = data.map((task) => task.content)
+  console.log(tasks)
+}).catch((error) => console.log(error));
+
 export const Dashboard = () => Widget.Button({
   class_name: 'dashboard-btn',
   onClicked: () => App.toggleWindow("test"),
@@ -17,7 +31,7 @@ export const DashWindow = () => {
 
       vertical: true,
       children: [
-        Widget.Box({ className: 'dashboard', vertical: true, children: [Notifications()] }),
+        Widget.Box({ className: 'dashboard', vertical: true, children: [Todoist()] }),
       ],
     }),
   })
@@ -45,5 +59,27 @@ export const Notifications = () => {
         ],
       })
     )),
+  });
+};
+
+const tasksBinding = tasks.bind();
+
+export const Todoist = () => {
+  return Widget.Box({
+    className: 'todo-list',
+    vertical: true,
+    setup: (self) => {
+      tasks.connect('changed', (tasks) => {
+        self.children = tasks.map((task) => (
+          Widget.Box({
+            className: 'todo-item',
+            vertical: true,
+            children: [
+              Widget.Label({ label: task }),
+            ],
+          })
+        ));
+      });
+    },
   });
 };
