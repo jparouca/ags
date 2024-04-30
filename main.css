@@ -90,11 +90,27 @@
 
 
 .dashboard {
-  padding: 2rem;
   background-color: #161617;
 }
 
 
 .notification-list {
   padding: 10px;
+}
+
+.todoist {
+  padding: 2rem;
+  color: #C9C7CD;
+}
+
+.todoist-tasks {
+  color: #C9C7CD;
+  margin-top: 0.6rem;
+}
+
+.todoist-count {
+  color: #C9C7CD;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
 }

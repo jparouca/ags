@@ -2,25 +2,22 @@ import { DashWindow } from "components/dashboard"
 import { Left } from "components/left-side"
 import { Right } from "components/right-side"
 
-const notifications = await Service.import("notifications")
 const mpris = await Service.import("mpris")
-
-
-function Notification() {
-  const popups = notifications.bind("popups")
-  return Widget.Box({
-    class_name: "notification",
-    visible: popups.as(p => p.length > 0),
-    children: [
-      Widget.Icon({
-        icon: "preferences-system-notifications-symbolic",
-      }),
-      Widget.Label({
-        label: popups.as(p => p[0]?.summary || ""),
-      }),
-    ],
-  })
-}
+// function Notification() {
+//   const popups = notifications.bind("popups")
+//   return Widget.Box({
+//     class_name: "notification",
+//     visible: popups.as(p => p.length > 0),
+//     children: [
+//       Widget.Icon({
+//         icon: "preferences-system-notifications-symbolic",
+//       }),
+//       Widget.Label({
+//         label: popups.as(p => p[0]?.summary || ""),
+//       }),
+//     ],
+//   })
+// }
 
 
 function Media() {
