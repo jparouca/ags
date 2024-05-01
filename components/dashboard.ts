@@ -52,12 +52,15 @@ export const DashWindow = () => {
           setup: self => self.hook(tasks, () => {
             self.children = [
               Widget.Box({
-                children: [Widget.Label({ label: tasks.getValue().length.toString(), className: 'todoist-count', justification: 'left' }),
-                Widget.Separator({
-                  vertical: false,
-                }),
+                children: [
+                  Widget.Label({ label: tasks.getValue().length.toString(), className: 'todoist-count', justification: 'left' }),
+                  Widget.Label({ label: 'Tasks', className: 'todoist-label', justification: 'right' }),
                 ],
-              })                            ...tasks.getValue().map(task => Widget.Label({ label: task, className: 'todoist-tasks' }))
+              }),
+              Widget.Separator({
+                vertical: false,
+              }),
+              ...tasks.getValue().map(task => Widget.Label({ label: task, className: 'todoist-tasks' }))
             ]
           })
         }),
