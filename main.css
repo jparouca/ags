@@ -41,7 +41,7 @@
 }
 
 .workspace-active {
-  background: rgba(17, 17, 17, 1);
+  background: rgba(225, 225, 225, 1);
 }
 
 .systray {
@@ -55,6 +55,7 @@
 
 .media {
   background: rgba(17, 17, 17, 0);
+  font-weight: bold;
   color: #c9c7cd;
 }
 
