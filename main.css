@@ -4,23 +4,22 @@
 }
 
 .bar {
-  background: #161617;
-  color: #C9C7CD;
+  background: rgba(17, 17, 17, 0.1);
+  color: #c9c7cd;
 }
 
-
 .right {
-  color: #C9C7CD;
+  color: #c9c7cd;
 }
 
 .left {
   margin-left: 2rem;
-  color: #C9C7CD;
+  color: #c9c7cd;
 }
 
 .center {
-  background: #161617;
-  color: #C9C7CD;
+  background: rgba(17, 17, 17, 0);
+  color: #c9c7cd;
 }
 
 .divider {
@@ -33,7 +32,7 @@
 }
 
 .workspace {
-  background-color: #3E3E43;
+  background-color: #3e3e43;
   padding: 0px;
   border-radius: 5px;
   min-width: 6px;
@@ -42,33 +41,32 @@
 }
 
 .workspace-active {
-  background-color: #C9C7CD;
+  background: rgba(17, 17, 17, 1);
 }
 
 .systray {
-  background-color: #161617;
+  background: rgba(17, 17, 17, 0);
 }
 
 .volume-indicator {
-  background-color: #161617;
-  color: #C9C7CD;
+  background: rgba(17, 17, 17, 0);
+  color: #c9c7cd;
 }
 
 .media {
-  background: #161617;
-  color: #C9C7CD;
+  background: rgba(17, 17, 17, 0);
+  color: #c9c7cd;
 }
 
 .microphone {
-  background-color: #161617;
-  color: #C9C6CD;
+  background: rgba(17, 17, 17, 0);
+  color: #c9c6cd;
 }
 
 .microphone-muted {
-  background-color: #161617;
+  background: rgba(17, 17, 17, 0);
   color: #757581;
 }
-
 
 .card {
   border-radius: 8px;
@@ -76,23 +74,20 @@
 }
 
 .clock {
-  color: #C9C7CD;
+  color: #c9c7cd;
 
   margin-right: 1rem;
-
 }
 
 .dashboard-btn {
+  background: rgba(17, 17, 17, 0);
 
-  background-color: #161617;
   color: #757581;
 }
 
-
 .dashboard {
-  background-color: #161617;
+  background: rgba(17, 17, 17, 0);
 }
-
 
 .notification-list {
   padding: 10px;
@@ -100,16 +95,16 @@
 
 .todoist {
   padding: 2rem;
-  color: #C9C7CD;
+  color: #c9c7cd;
 }
 
 .todoist-tasks {
-  color: #C9C7CD;
+  color: #c9c7cd;
   margin-top: 0.6rem;
 }
 
 .todoist-count {
-  color: #C9C7CD;
+  color: #c9c7cd;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.2rem;

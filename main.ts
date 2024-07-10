@@ -23,10 +23,12 @@ const mpris = await Service.import("mpris")
 function Media() {
   const label = Utils.watch("", mpris, "player-changed", () => {
     if (mpris.players[0]) {
-      const { track_artists, track_title } = mpris.players[0]
-      return `${track_artists.join(", ")} - ${track_title.slice(0, 16)}`
+      const { track_artists, track_title, name } = mpris.players[0]
+      if (name === "spotify") {
+        return `${track_artists.join(", ")} - ${track_title.slice(0, 16)}`
+      }
     }
-    return "-"
+    return ""
   })
 
   return Widget.Button({
