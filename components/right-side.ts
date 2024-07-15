@@ -11,7 +11,7 @@ const audio = await Service.import('audio')
 export const Right = () => {
   return Widget.EventBox({
     onSecondaryClick: () => audio.microphone.is_muted = !audio.microphone.is_muted,
-    onPrimaryClick: () => audio.speaker.is_muted = !audio.speaker.is_muted,
+    onMiddleClick: () => audio.speaker.is_muted = !audio.speaker.is_muted,
     onScrollUp: () => {
       if (!Audio.speaker) return;
       if (Audio.speaker.volume <= 0.09) Audio.speaker.volume += 0.01;
