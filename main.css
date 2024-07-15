@@ -76,18 +76,28 @@
 
 .clock {
   color: #c9c7cd;
-
-  margin-right: 1rem;
 }
 
 .dashboard-btn {
   background: rgba(17, 17, 17, 0);
-
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: #757581;
 }
 
 .dashboard {
-  background: rgba(17, 17, 17, 0);
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 24px;
+}
+
+.popup-window {
+  border-radius: 25px;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 24px;
 }
 
 .notification-list {
@@ -109,4 +119,40 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
+}
+
+.avatar {
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 12px;
+  background-size: cover;
+}
+
+.user-info {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+.user-details {
+  background: rgba(17, 17, 17, 1);
+  margin-left: 1rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.user-name {
+  color: #f5a191;
+}
+
+.user-system-controls {
+  padding: 1rem;
+}
+
+.systemctl {
+  min-width: 25px;
+  min-height: 25px;
+  margin-top: 0.1rem;
+  border-radius: 12px;
 }

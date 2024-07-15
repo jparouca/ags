@@ -11,6 +11,7 @@ export default ({
   ...props
 }) => {
   return Window({
+    className: "popup-window",
     name,
     visible: false,
     layer: 'overlay',
@@ -27,7 +28,7 @@ export default ({
           });
 
           if (showClassName !== "" && hideClassName !== "")
-            self.className = `${showClassName} ${hideClassName}`;
+            self.class_name = `${showClassName} ${hideClassName}`;
         }
       },
       child: child,
