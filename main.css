@@ -158,3 +158,10 @@
   margin-top: 0.1rem;
   border-radius: 12px;
 }
+
+.bar-time {
+  margin-left: 0.7rem;
+  border-radius: 0px;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
