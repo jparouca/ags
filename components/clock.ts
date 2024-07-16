@@ -17,9 +17,8 @@ export const Clock = () => {
       }),
   });
 
-  const timeButton = Widget.Button({
+  const timeLabel = Widget.Box({
     className: 'bar-time',
-    onClicked: () => App.toggleWindow('clock-window'),
     child: Widget.Label({
       label: updateTime(),
       setup: (self) =>
@@ -30,9 +29,12 @@ export const Clock = () => {
   })
 
   return (
-    Widget.Box({
+    Widget.EventBox({
       className: 'clock',
-      children: [dateLabel, timeButton],
+      onPrimaryClick: () => App.toggleWindow('clock-window'),
+      child: Widget.Box({
+        children: [dateLabel, timeLabel],
+      }),
       tooltipText: GLib.DateTime.new_now_local().format('%c'),
     })
   );

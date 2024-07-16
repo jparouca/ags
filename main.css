@@ -160,8 +160,9 @@
 }
 
 .bar-time {
-  margin-left: 0.7rem;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  background-color: #94E2D5;
+  color:rgba(17, 17, 17, 1);
   border-radius: 0px;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
 }
