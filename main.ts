@@ -1,4 +1,6 @@
-import { DashWindow } from "components/dashboard"
+// import { DashWindow } from "components/dashboard"
+const hyprland = await Service.import('hyprland')
+import { ClockWindow } from "components/clock"
 import { Left } from "components/left-side"
 import { Right } from "components/right-side"
 
@@ -18,7 +20,6 @@ const mpris = await Service.import("mpris")
 //     ],
 //   })
 // }
-
 
 function Media() {
   const label = Utils.watch("", mpris, "player-changed", () => {
@@ -45,7 +46,6 @@ function Media() {
   })
 }
 
-
 function Center() {
   return Widget.Box({
     className: "center",
@@ -56,7 +56,6 @@ function Center() {
     ],
   })
 }
-
 
 function Bar(monitor = 0) {
   return Widget.Window({
@@ -77,7 +76,8 @@ App.config({
   style: "./main.css",
   windows: [
     Bar(),
-    DashWindow(),
+    ClockWindow()
+    // DashWindow(),
   ],
 })
 

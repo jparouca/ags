@@ -48,14 +48,14 @@
   background: rgba(17, 17, 17, 0);
 }
 
-.volume-indicator {
-  background: rgba(17, 17, 17, 0);
-  color: #c9c7cd;
-}
-
 .media {
   background: rgba(17, 17, 17, 0);
   font-weight: bold;
+  color: #c9c7cd;
+}
+
+.volume-indicator {
+  background: rgba(17, 17, 17, 0);
   color: #c9c7cd;
 }
 
@@ -76,6 +76,8 @@
 
 .clock {
   color: #c9c7cd;
+  background-color: inherit;
+  margin-right: 1rem;
 }
 
 .dashboard-btn {
