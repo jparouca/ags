@@ -54,6 +54,7 @@ export const ClockWindow = () => {
 
 const Calendar = () => {
   return Widget.Calendar({
+    className: 'calendar',
     showDayNames: true,
     showDetails: false,
     showHeading: true,

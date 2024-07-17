@@ -4,7 +4,7 @@
 }
 
 .bar {
-  background: rgba(17, 17, 17, 0.1);
+  background: rgba(00, 00, 00, 0.28);
   color: #c9c7cd;
 }
 
@@ -162,7 +162,15 @@
 .bar-time {
   margin-left: 0.5rem;
   padding: 0 0.5rem;
-  background-color: #94E2D5;
-  color:rgba(17, 17, 17, 1);
+  background-color: #94e2d5;
+  color: rgba(17, 17, 17, 1);
   border-radius: 0px;
+}
+
+.clock-window {
+  background: rgba(00, 00, 00, 0.45);
+}
+
+.calendar {
+  background: rgba(00, 00, 00, 0.5);
 }
