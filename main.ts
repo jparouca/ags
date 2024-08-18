@@ -1,10 +1,10 @@
 // import { DashWindow } from "components/dashboard"
-const hyprland = await Service.import('hyprland')
-import { ClockWindow } from "components/clock"
-import { Left } from "components/left-side"
-import { Right } from "components/right-side"
+const hyprland = await Service.import("hyprland");
+import { ClockWindow } from "components/clock";
+import { Left } from "components/left-side";
+import { Right } from "components/right-side";
 
-const mpris = await Service.import("mpris")
+const mpris = await Service.import("mpris");
 // function Notification() {
 //   const popups = notifications.bind("popups")
 //   return Widget.Box({
@@ -24,13 +24,13 @@ const mpris = await Service.import("mpris")
 function Media() {
   const label = Utils.watch("", mpris, "player-changed", () => {
     if (mpris.players[0]) {
-      const { track_artists, track_title, name } = mpris.players[0]
+      const { track_artists, track_title, name } = mpris.players[0];
       if (name === "spotify") {
-        return `${track_artists.join(", ")} - ${track_title.slice(0, 16)}`
+        return `${track_artists.join(", ")} - ${track_title.slice(0, 16)}`;
       }
     }
-    return ""
-  })
+    return "";
+  });
 
   return Widget.Button({
     class_name: "media",
@@ -40,10 +40,10 @@ function Media() {
     child: Widget.Revealer({
       revealChild: true,
       transitionDuration: 1000,
-      transition: 'slide_right',
+      transition: "slide_right",
       child: Widget.Label({ label }),
-    })
-  })
+    }),
+  });
 }
 
 function Center() {
@@ -54,7 +54,7 @@ function Center() {
       Media(),
       // Notification(),
     ],
-  })
+  });
 }
 
 function Bar(monitor = 0) {
@@ -69,16 +69,15 @@ function Bar(monitor = 0) {
       center_widget: Center(),
       end_widget: Right(),
     }),
-  })
+  });
 }
 
 App.config({
-  style: "./main.css",
+  style: `${App.configDir}/style.css`,
   windows: [
     Bar(),
-    ClockWindow()
+    ClockWindow(),
     // DashWindow(),
   ],
-})
-
-export { }
+});
+export {};
