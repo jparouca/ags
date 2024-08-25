@@ -167,14 +167,7 @@
   border-radius: 0px;
 }
 
-.clock-window {
-  background: rgba(00, 00, 00, 0.45);
-}
-
 .calendar {
-  background: rgba(00, 00, 00, 0.5);
-}
-
-.sidebar {
-  padding: 8rem 4rem;
+  background: rgba(00, 00, 00, 0);
+  padding: 1rem;
 }

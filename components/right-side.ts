@@ -5,6 +5,7 @@ import { Divider } from "components/divider"
 import { SysTray } from './systray.js';
 import { MicIndicator } from './mic-indicator.js';
 import { VolumeIndicator } from './volume-indicator.js'
+import { BatteryWidget } from './battery.js';
 // import { Dashboard } from './dashboard.js';
 const audio = await Service.import('audio')
 
@@ -31,6 +32,7 @@ export const Right = () => {
       children: [
         VolumeIndicator,
         MicIndicator,
+        // BatteryWidget(),
         Divider(),
         SysTray(),
         Divider(),
